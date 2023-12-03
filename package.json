@@ -16,6 +16,7 @@
   "author": "Nicolas Kumabe",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.0"
+    "cypress": "^13.6.0",
+    "mongodb": "^6.3.0"
   }
 }
