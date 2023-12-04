@@ -11,7 +11,7 @@ describe('POST /users', ()=> {
     cy.task('deleteUser', user.email)
 
 
-    cy.request({
+    cy.api({
       url: '/users',
       method: 'POST',
       body: user,
