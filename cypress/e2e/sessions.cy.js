@@ -2,17 +2,20 @@ describe('POST /sessions', () => {
 
     it('user session', () => {
         const userData = {
-            name: 'Nicolas Kumabe',
-            email: 'nicolas@yahoo.com',
+            name: 'Will Smith',
+            email: 'slap@hotmail.com',
             password: 'pwd123'
         }
 
+        cy.task('deleteUser', userData.email)
+        cy.postUser(userData)
+
         cy.postSession(userData)
             .then(response => {
+                expect(response.status).to.eq(200)
 
                 const { user, token } = response.body
 
-                expect(response.status).to.eq(200)
                 expect(user.name).to.eq(userData.name)
                 expect(user.email).to.eq(userData.email)
                 expect(token).not.to.be.empty
