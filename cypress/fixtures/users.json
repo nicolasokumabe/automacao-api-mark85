@@ -1,0 +1,31 @@
+{
+    "login": {
+        "name": "Will Smith",
+        "email": "slap@hotmail.com",
+        "password": "pwd123"
+    },
+    "inv_pass": {
+        "email": "nicolas@yahoo.com",
+        "password": "123456"
+    },
+    "email_404": {
+        "email": "404@yahoo.com",
+        "password": "pwd123"
+    },
+    "create": {
+        "name": "Nicolas Kumabe",
+        "email": "nicolas@yahoo.com",
+        "password": "pwd123"
+    },
+    "dup_email": {
+        "name": "Ramon Dino",
+        "email": "dino@hotmail.com",
+        "password": "pwd123"
+      },
+    "required": {
+        "name": "Chris Bumbstead",
+        "email": "cbum@gmail.com",
+        "password": "pwd123"
+      }  
+    
+}

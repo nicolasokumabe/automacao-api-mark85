@@ -1,0 +1,17 @@
+{
+    "create": {
+        "user": {
+            "name": "Kumabe Nicolas",
+            "email": "kumabe@hotmail.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Pagar fatura do cartão",
+            "tags": [
+                "nubank",
+                "c6",
+                "will"
+            ]
+        }
+    }
+}

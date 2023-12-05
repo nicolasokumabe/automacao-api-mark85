@@ -1,11 +1,15 @@
 describe('POST /sessions', () => {
 
-    it('user session', () => {
-        const userData = {
-            name: 'Will Smith',
-            email: 'slap@hotmail.com',
-            password: 'pwd123'
-        }
+    beforeEach(function () {
+        cy.fixture('users').then(function (users) {
+            this.users = users
+        })
+    })
+
+    it('user session', function () {
+
+
+        const userData = this.users.login
 
         cy.task('deleteUser', userData.email)
         cy.postUser(userData)
@@ -20,13 +24,13 @@ describe('POST /sessions', () => {
                 expect(user.email).to.eq(userData.email)
                 expect(token).not.to.be.empty
             })
+
+
+
     })
 
-    it('invalid password', () => {
-        const user = {
-            email: 'nicolas@yahoo.com',
-            password: '123456'
-        }
+    it('invalid password', function () {
+        const user = this.users.inv_pass
 
         cy.postSession(user)
             .then(response => {
@@ -34,11 +38,8 @@ describe('POST /sessions', () => {
             })
     })
 
-    it('email not found', () => {
-        const user = {
-            email: '404@yahoo.com',
-            password: 'pwd123'
-        }
+    it('email not found', function () {
+        const user = this.users.email_404
 
         cy.postSession(user)
             .then(response => {
@@ -48,11 +49,3 @@ describe('POST /sessions', () => {
 
 })
 
-Cypress.Commands.add('postSession', (user) => {
-    cy.api({
-        url: '/sessions',
-        method: 'POST',
-        body: { email: user.email, password: user.password },
-        failOnStatusCode: false
-    }).then(response => { return response })
-})
