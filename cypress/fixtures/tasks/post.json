@@ -13,5 +13,15 @@
                 "will"
             ]
         }
+    },
+    "dup": {
+        "user": {
+            "name": "Rodrigo Góes",
+            "email": "fake@natty.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Comprar o Suco"
+        }
     }
 }
