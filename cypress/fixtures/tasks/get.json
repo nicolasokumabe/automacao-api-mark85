@@ -7,7 +7,7 @@
         },
         "tasks": [
             {
-                "name": "Estudar adversário",
+                "name": "Estud4r adversário",
                 "tags": [
                     "Conor McGregor",
                     "Rogério Minotouro",
@@ -15,22 +15,16 @@
                 ]
             },
             {
-                "name": "Ler livros",
+                "name": "Estud4r livros",
                 "tags": [
                     "Bíblia"
                 ]
             },
             {
-                "name": "Ler livros",
+                "name": "Estud4r Matemática",
                 "tags": [
-                    "Bíblia"
-                ]
-            },
-            {
-                "name": "Consultas",
-                "tags": [
-                    "Fono",
-                    "Fisio"
+                    "Elipse",
+                    "Hipérbole"
                 ]
             }
         ]
