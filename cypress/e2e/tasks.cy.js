@@ -27,4 +27,23 @@ describe('POST /tasks', () => {
                     })
             })
     })
+
+    it('duplicate task', function () {
+        const { user, task } = this.tasks.dup
+
+        cy.task('deleteUser', user.email)
+        cy.postUser(user)
+
+        cy.postSession(user)
+            .then(userResp => {
+                cy.task('deleteTask', task.name, user.email)
+
+                cy.postTask(task, userResp.body.token)
+                cy.postTask(task, userResp.body.token)
+                    .then(response => {
+                        expect(response.status).to.eq(409)
+                        expect(response.body.message).to.eq('Duplicated task!')
+                    })
+            })
+    })
 })
