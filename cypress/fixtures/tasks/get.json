@@ -1,0 +1,40 @@
+{
+    "list": {
+        "user": {
+            "name": "Anderson Silva",
+            "email": "spider@ufc.com",
+            "password": "pwd123"
+        },
+        "tasks": [
+            {
+                "name": "Estudar adversário",
+                "tags": [
+                    "Conor McGregor",
+                    "Rogério Minotouro",
+                    "Wanderlei Silva"
+                ]
+            },
+            {
+                "name": "Ler livros",
+                "tags": [
+                    "Bíblia"
+                ]
+            },
+            {
+                "name": "Ler livros",
+                "tags": [
+                    "Bíblia"
+                ]
+            },
+            {
+                "name": "Consultas",
+                "tags": [
+                    "Fono",
+                    "Fisio"
+                ]
+            }
+        ]
+
+        
+    }
+}
