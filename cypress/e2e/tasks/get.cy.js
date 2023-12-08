@@ -43,6 +43,7 @@ describe('GET /tasks', () => {
 })
 
 describe('GET /tasks/:id', () => {
+
     beforeEach(function () {
         cy.fixture('tasks/get').then(function (tasks) {
             this.tasks = tasks
@@ -73,7 +74,48 @@ describe('GET /tasks/:id', () => {
                         }).then(response => {
                             expect(response.status).to.eq(200)
                         })
-                    }) 
+                    })
+            })
+    })
+
+    it('task not found', function () {
+        const { user, task } = this.tasks.not_found
+
+
+        cy.task('deleteTask', task.name, user.email)
+        cy.task('deleteUser', user.email)
+        cy.postUser(user)
+
+        cy.postSession(user)
+            .then(userResp => {
+
+                cy.postTask(task, userResp.body.token)
+                    .then(taskResp => {
+
+                        cy.api({
+                            url: '/tasks/' + taskResp.body._id,
+                            method: 'DELETE',
+                            headers: {
+                                authorization: userResp.body.token
+                            },
+                            failOnStatusCode: false
+                        }).then(response => {
+                            expect(response.status).to.eq(204)
+                        })
+
+                        cy.api({
+                            url: '/tasks/' + taskResp.body._id,
+                            method: 'GET',
+                            headers: {
+                                authorization: userResp.body.token
+                            },
+                            failOnStatusCode: false
+                        }).then(response => {
+                            expect(response.status).to.eq(404)
+                        })
+                    })
+
             })
     })
 })
+
