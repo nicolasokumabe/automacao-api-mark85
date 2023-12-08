@@ -28,7 +28,20 @@
                 ]
             }
         ]
-
-        
+    },
+    "unique": {
+        "user": {
+            "name": "Lucia Jason",
+            "email": "couple@miami.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Visitar em Miami",
+            "tags": [
+                "Jungle Island",
+                "Museum Park",
+                "Wynwood Walls"
+            ]
+        }
     }
 }
