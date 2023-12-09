@@ -18,7 +18,7 @@ describe('POST /tasks', () => {
 
                 cy.postTask(task, userResp.body.token)
                     .then(response => {
-                        expect(response.status).to.eq(200)
+                        expect(response.status).to.eq(201)
                         expect(response.body.name).to.eq(task.name)
                         expect(response.body.tags).to.eql(task.tags)
                         expect(response.body.is_done).to.be.false
