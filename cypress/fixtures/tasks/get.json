@@ -43,5 +43,15 @@
                 "Wynwood Walls"
             ]
         }
+    },
+    "not_found": {
+        "user": {
+            "name": "Carl Johnson",
+            "email": "cj@grove.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Andar de bicicleta"        
+        }
     }
 }
