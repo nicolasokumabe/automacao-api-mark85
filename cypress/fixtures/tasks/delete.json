@@ -1,0 +1,33 @@
+{
+    "remove": {
+        "user": {
+            "name": "Tommy Vercetti",
+            "email": "vice@leonida.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Visitar em Florida",
+            "tags": [
+                "Clearwater",
+                "Fort Lauderdale",
+                "Cocoa Beach",
+                "Jacksonville",
+                "Walt Disney World",
+                "Key West",
+                "St. Augustine",
+                "Tampa",
+                "Palm Beach"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "Michael De Santa",
+            "email": "nedluke@ls.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Férias na Flórida em 2025"
+        }
+    }
+}
