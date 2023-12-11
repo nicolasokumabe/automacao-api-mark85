@@ -29,6 +29,11 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:3333',
     video: false,
-    screenshotOnRunFailure: false
+    screenshotOnRunFailure: false,
+    env:{
+      amqpHost:'https://fish.rmq.cloudamqp.com/api/queues/mrcwistd',
+      amqpQueue: 'tasks',
+      amqpToken:'Basic bXJjd2lzdGQ6eWtoOEdwc2xQQ3NNYmVrRWRDZUhRQUJsTUpHRHJIa3k='
+    }
   },
 });
