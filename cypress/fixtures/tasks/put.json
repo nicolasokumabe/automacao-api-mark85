@@ -1,0 +1,26 @@
+{
+    "update": {
+        "user": {
+            "name": "Niko Bellic",
+            "email": "libertycity@iv.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Atividades",
+            "tags": [
+                "jogar boliche",
+                "show de comédia"                
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "Trevor Philips",
+            "email": "stevenogg@ls.com",
+            "password": "pwd123"
+        },
+        "task": {
+            "name": "Bagunça na Flórida em 2025"
+        }
+    }
+}

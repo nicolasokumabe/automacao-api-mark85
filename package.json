@@ -16,8 +16,11 @@
   "author": "Nicolas Kumabe",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.1",
+    "allure-commandline": "^2.25.0",
     "cypress": "^13.6.0",
     "cypress-plugin-api": "^2.11.1",
+    "dotenv": "^16.3.1",
     "mongodb": "^6.3.0"
   }
 }
